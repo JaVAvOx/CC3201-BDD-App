@@ -1,0 +1,139 @@
+<!doctype html>
+{% load staticfiles %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>CC3201 Grupo 02</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'prueba/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'prueba/css/navbar-top-fixed.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Grupo 02 - CC3201</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas Informe</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/consulta1/">Consulta 1</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/consulta2/">Consulta 2</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/consulta3/">Consulta 3</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas Personalizadas</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/consulta11/">Consulta 1</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/consulta22/">Consulta 2</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/consulta33/">Consulta 3</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tablas</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/tablaCarro/">Carro</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/tablaProveedor/">Proveedor</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/tablaInsumo/">Insumo</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/tablaProceso/">Proceso</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/tablaCliente/">Cliente</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Insertar en Tablas</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/insertarCarro/">Carro</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/insertarProveedor/">Proveedor</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/insertarInsumo/">Insumo</a>
+              <a class="dropdown-item" href="http://cc3201.dcc.uchile.cl/grupo02/prueba/insertarCliente/">Cliente</a>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <h1 align="center">Actualizar Datos</h1>
+      <h5 align="center"; style="color:#B0B0B0"><i>Actualización de Cliente</i></h5>
+      <div class="jumbotron">
+
+
+
+
+
+
+        <form action="" method="post">
+          <h5>ID Venta: {{id}}</h5>
+          {% csrf_token %}
+          {{ actualizarcliente_form }}
+          <input type="submit" value="Actualizar" />
+        </form>
+
+        <!--
+        {% block content%}
+        <table class="table table-striped table-hover">
+          <thead bgcolor="0CB8EA"; border-radius:20px;>
+            <tr>
+              <td style="color:#FFFFFF";>#</td>
+              <td style="color:#FFFFFF";>Etapa</td>
+              <td style="color:#FFFFFF";>Hora Ingreso</td>
+              <td style="color:#FFFFFF";>Hora Salida</td>
+              <td style="color:#FFFFFF";>Guardar</td>
+            </tr>
+          </thead>
+             {% if tabla %}
+            {% for elemento in tabla %}
+            <tr>
+              <td>{{elemento.id_carro}}</td>
+              <td>{{elemento.etapa}}</td>
+              <td>{{elemento.hora_ingreso}}</td>
+              <td>{{elemento.hora_salida}}</td>
+
+            </tr>
+            {% endfor %}
+
+           {% endif %}
+
+           {% endblock%}-->
+
+
+
+
+
+
+      </div>
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'prueba/js/popper.min.js' %}"></script>
+    <script src="{% static 'prueba/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
