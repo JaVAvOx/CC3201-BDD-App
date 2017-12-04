@@ -1,6 +1,6 @@
 # CC3201-BDD-App
 
-App developed for CC3201 'Databases' course. Developed in collaboration with 23pablo97 (https://github.com/23pablo97)
+App developed for CC3201 'Databases' course. Developed in collaboration with @23pablo97 (https://github.com/23pablo97)
 
 
 This was a project based on a postgres database running on a temporary server (University server). We made it using Django + Bootstrap 4.
